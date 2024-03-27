@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="css/estilos.css" />
+    <title>Contatos</title>
+</head>
+<body>
+    <header>
+        <img src="caminho/imagem.ext"> assets/images/foto.png
+        <h1>...</h1>
+    </header>
+    <main>
+        <section id="form">    
+            <h2>Contatos</h2>
+            <form id="contatos" name="contatos" method="post" action="">
+                Email:<br />
+                <input type="email" placeholder="Entre com seu e-mail aqui..."><br />    
+                Departamento:<br />
+                <select name="emails">
+                    <option selected>-- Escolha um departamento --</option>
+                    <optgroup label="E-mails Principais">
+                        <option value="f020dir@cps.sp.gov.br">Diretoria</option>
+                        <option>Secretaria</option>            
+                    </optgroup>
+                    <optgroup label="Coordenadorias:">
+                        <option>Construção Naval</option>
+                        <option>Gestão da Tecnologia da Informação</option>
+                        <option>Gestão de Produção Industrial</option>
+                        <option>Logística</option>
+                        <option>Meio Ambiente e Recursos Hídricos</option>
+                        <option>Sistemas para Internet</option>
+                        <option>Sistemas Navais</option>
+                    </optgroup>
+                </select><br />
+                Assunto:<br />
+                <input type="text" placeholder="Qual o assunto..."><br />
+                Mensagem:<br />
+                <textarea rows="10" cols="100" name="conteudo" form="contatos" placeholder="Entre com sua mensagem aqui..."></textarea>
+                <br /><br />
+                <input type="submit" value="Enviar" />
+                <input type="reset" value="Limpar" />
+            </form>
+        </section>
+   </main>
+   <footer>
+    <p>...</p>
+   </footer>
+</body>
+</html>

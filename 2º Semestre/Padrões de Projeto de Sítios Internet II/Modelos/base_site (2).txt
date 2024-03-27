@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+	<html>
+
+		<head> 
+
+			<title> titulo da janela </title>
+
+		</head>
+
+
+		<body>
+
+		</body>
+	</html>
+
+
+
+
+
+$(FULL_CURRENT_PATH)
