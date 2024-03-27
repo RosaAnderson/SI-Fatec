@@ -1,0 +1,67 @@
+<DOCTYPE html>
+<html>
+	<head>
+		<link rel="stylesheet" type="text/css" href="style.css"/>    
+		<script type="text/javascript" src="http://code.jquery.com/jquery-1.7.2.min.js"></script>
+		<script type="text/javascript" src="script.js"></script>
+	</head>
+	<body>
+		<div id="game">
+			<div id="player">
+				<form>
+					<h2> Jogadores </h2>
+					<input class="pl" type="text" id="pl1" placeholder="Jogador 1" required>
+					<input class="pl" type="text" id="pl2" placeholder="Jogador 2" required>
+				</form>
+			</div>
+		
+			<div id="gamecards">
+				<div class="line">
+					<div class="box" id="box01">
+						<img class="card" src="img/back.jpg" onclick="check('101.jpg', 0)">
+					</div>
+					<div class="box" id="box02">
+						<img class="card" src="img/back.jpg" onclick="check('105.jpg', 1)">
+					</div>
+					<div class="box" id="box03">
+						<img class="card" src="img/back.jpg" onclick="check('102.jpg', 2)">
+					</div>
+					<div class="box" id="box04">
+						<img class="card" src="img/back.jpg" onclick="check('103.jpg', 3)">
+					</div>
+				</div>
+				
+				<div class="line">
+					<div class="box" id="box05">
+						<img class="card" src="img/back.jpg" onclick="check('106.jpg', 4)">
+					</div>
+					<div class="box" id="box06">
+						<img class="card" src="img/back.jpg" onclick="check('104.jpg', 5)">
+					</div>
+					<div class="box" id="box07">
+						<img class="card" src="img/back.jpg" onclick="check('103.jpg', 6)">
+					</div>
+					<div class="box" id="box08">
+						<img class="card" src="img/back.jpg" onclick="check('101.jpg', 7)">
+					</div>
+				</div>
+				
+				<div class="line">
+					<div class="box" id="box09">
+						<img class="card" src="img/back.jpg" onclick="check('106.jpg', 8)">
+					</div>
+					<div class="box" id="box10">
+						<img class="card" src="img/back.jpg" onclick="check('105.jpg', 9)">
+					</div>
+					<div class="box" id="box11">
+						<img class="card" src="img/back.jpg" onclick="check('104.jpg', 10)">
+					</div>
+					<div class="box" id="box12">
+						<img class="card" src="img/back.jpg" onclick="check('102.jpg', 11)">
+					</div>
+				</div>
+			</div>
+			<div id="result"></div>
+		</div>
+	</body>
+</html>

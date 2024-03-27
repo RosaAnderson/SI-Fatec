@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Meu Primeiro getElementById</title>
+</head>
+
+<body>
+    <h1>Acenda a Lâmpada</h1>
+    <img src="lampada_apagada.jpg" id="imagem">
+    <button onclick="acender()">Acender</button>
+
+    <script>
+        function acender() 
+        {
+            document.getElementById('imagem').src = 'lampada_acesa.jpg';
+
+            document.getElementById('imagem').title = 'lampada_acesa'
+        }
+        
+    </script>
+</body>
+
+</html>

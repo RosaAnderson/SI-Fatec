@@ -1,0 +1,28 @@
+<!doctype html>
+	<html>
+		<head>
+			<meta charset="UTF-8">
+			<title>Calcular valor de venda</title>
+			<script src="functions.js"> </script>
+		</head>
+		
+		<body>
+			<label for="campo">Custo:</label>
+			<input type="text" id="vtCust" placeholder="Entre com o valor de custo" required>
+			
+			<br>
+
+			<label for="combo">Tipo de Produto:</label>
+			<select id="vtProd" required>
+				<option value="A">Tipo A</option>
+				<option value="B">Tipo B</option>
+				<option value="C">Tipo C</option>
+				<option value="D">Tipo D</option>
+			</select>
+
+			<br> <br>
+
+			<button onclick="vVenda()">Calcular</button>
+
+		</body>
+	</html>

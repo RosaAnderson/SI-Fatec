@@ -1,0 +1,42 @@
+<lista>
+	<produto>
+		<descricao>Coca-Cola 2L descartável</descricao>
+		<valor>8,49</valor>
+	</produto>
+	<produto>
+		<descricao>Coca-Cola 2L retornável</descricao>
+		<valor>6,49</valor>
+	</produto>
+	<produto>
+		<descricao>Energético Monster 730ml</descricao>
+		<valor>8,20</valor>
+	</produto>
+	<produto>
+		<descricao>Bisnaguinha</descricao>
+		<valor>5,90</valor>
+	</produto>
+	<produto>
+		<descricao>Torrada</descricao>
+		<valor>3,10</valor>
+	</produto>
+	<produto>
+		<descricao>Presunto Sadia (kg)</descricao>
+		<valor>45,00</valor>
+	</produto>
+	<produto>
+		<descricao>Mussarela (kg)</descricao>
+		<valor>60,00</valor>
+	</produto>
+	<produto>
+		<descricao>Patê Atum</descricao>
+		<valor>4,70</valor>
+	</produto>
+	<produto>
+		<descricao>Salame (kg)</descricao>
+		<valor>83,60</valor>
+	</produto>
+	<produto>
+		<descricao>Maionese 500g</descricao>
+		<valor>1,30</valor>
+	</produto>
+</lista>

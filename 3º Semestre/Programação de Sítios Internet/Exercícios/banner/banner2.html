@@ -1,0 +1,33 @@
+<!doctype html>
+<html>
+	<head>
+		<title>banner</title>
+		<script>
+			var x=0;
+			var vet = ["b1.jpg", "b2.jpg", "b3.jpg"];
+			
+			function banner()
+			{
+				
+				setInterval("f()", 3000);
+				
+			}
+			function f()
+			{
+				if(x > 2)
+				{
+					x=0 
+				} 
+				else 
+				{
+					document.getElementById('figura').src=vet[x]; 
+					x++
+				}
+			}
+		</script>
+	</head>
+	<body onload="banner()">
+		<img id="figura" />
+		
+	</body>
+</html>

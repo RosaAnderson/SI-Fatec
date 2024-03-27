@@ -1,0 +1,79 @@
+Pegar valor de inputs pelo nome da tag input – getElementsByName
+JULHO 18, 2012 9 COMENTÁRIOS
+
+2 Votes
+
+Imagine um formulário ou página html que contêm vários inputs com o mesmo nome e que você queira pegar o valor destes, pois bem, segue abaixo, um jeito simples de pegar estes valores.
+
+fonte: https://mastigado.wordpress.com
+
+1
+2
+3
+4
+5
+6
+7
+8
+    function pegaValor(){
+       var elemento = document.getElementsByName('nameval');
+ 
+       for(i=0;i<elemento.length;i++){
+          var e = elemento[i];
+          alert(e.value);
+       }
+}
+Na verdade, coloquei os mesmos nomes nas tags input propositalmente, mas eu também poderia ao invés de utilizar a função getElementsByName(que me permite pegar os elementos pelo nome contido no campo name do elemento), utilizar a função getElementsByTagName, que me permite obter todos os elementos pelo tipo da tag, neste caso, seriam input.
+
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+<body>
+ 
+<ul>
+ <li><input name="nameval" type="text" value="2"/></li>
+ <li><input name="nameval" type="text" value="55"/></li>
+ <li><input name="nameval" type="text" value="10"/></li>
+ <li><input name="nameval" type="text" value="9"/></li>
+ </ul>
+ 
+<input onClick="pegaValor()" value="mostrar" type="button" name="cmdSalvar" id="cmdSalvar" />
+ 
+</body>
+Bem, então o que fiz para funcionar? Vamos lá, bem mastigado.
+
+1º – Chamei a função dentro de um input do tipo button no html.
+
+1
+function pegaValor()
+2º – Declarei a função javascript dentro de um local apropriado para códigos javascript(neste caso utilizei o próprio documento html, mas recomendo escrever os códigos javascript em um arquivo à parte e no html você só precisaria descrever um comando include referente a este arquivo).
+
+1
+function pegaValor(){
+3º – Declarei uma variável chamada elemento para armazenar o valor de todos os elementos de nome nameval contidos no documento html.
+
+1
+var elemento = document.getElementsByName('nameval');
+4º – Declarei um laço for para percorrer  todos os inputs de nome nameval que armazenei dentro da variável elemento. Daí é bom lembrar que no 2º passo do laço for, utilizo a propriedade length, que serve para estabelecer a quantidade de elementos contidos dentro da variável elemento, assim posso deduzir que existem 4 elementos dentro da variável elemento porque dentro de meu html existem 4 elementos input de nome nameval.
+
+1
+for(i=0;i<elemento.length;i++){
+5º – Daí, dentro do laço for, criei uma variável chamada e para armazenar cada objeto do tipo elemento de acordo com a posição i definada no momento.
+
+1
+var e = elemento[i];
+6º – E para finalizar, dou um alert no valor deste objeto para ver o que tem lá dentro, mas depois que você tem acesso a este objeto é possível enviá-lo para onde achar melhor.
+
+1
+2
+   alert(e.value);
+}
