@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="1000"
+   height="1000"
+   viewBox="0 0 264.58332 264.58331"
+   version="1.1"
+   id="svg5"
+   sodipodi:docname="logo.svg"
+   inkscape:version="1.1.2 (b8e25be833, 2022-02-05)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview7"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="false"
+     inkscape:document-units="px"
+     showgrid="false"
+     units="px"
+     showguides="true"
+     inkscape:guide-bbox="true"
+     inkscape:zoom="0.2475"
+     inkscape:cx="501.0101"
+     inkscape:cy="1125.2525"
+     inkscape:window-width="1366"
+     inkscape:window-height="705"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="layer1">
+    <sodipodi:guide
+       position="26.458331,238.12498"
+       orientation="0,1"
+       id="guide824"
+       inkscape:label="Margem superior"
+       inkscape:locked="true"
+       inkscape:color="rgb(0,0,255)" />
+    <sodipodi:guide
+       position="26.458331,238.12498"
+       orientation="-1,0"
+       id="guide826"
+       inkscape:label="Margem esquerda"
+       inkscape:locked="true"
+       inkscape:color="rgb(0,0,255)" />
+    <sodipodi:guide
+       position="238.12498,238.12498"
+       orientation="-1,0"
+       id="guide828"
+       inkscape:label="Margem Direita"
+       inkscape:locked="true"
+       inkscape:color="rgb(0,0,255)" />
+    <sodipodi:guide
+       position="26.458331,26.458331"
+       orientation="0,1"
+       id="guide830"
+       inkscape:label="Margem inferior"
+       inkscape:locked="true"
+       inkscape:color="rgb(0,0,255)" />
+  </sodipodi:namedview>
+  <defs
+     id="defs2" />
+  <g
+     inkscape:label="Camada 1"
+     inkscape:groupmode="layer"
+     id="layer1">
+    <text
+       xml:space="preserve"
+       style="font-size:10.5833px;line-height:1.25;font-family:Webdings;-inkscape-font-specification:Webdings;stroke-width:0.264583"
+       x="64.141411"
+       y="86.056389"
+       id="text6094"><tspan
+         sodipodi:role="line"
+         id="tspan6092"
+         style="stroke-width:0.264583"></tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:99.2025px;line-height:1.25;font-family:'Marquee Moon';-inkscape-font-specification:'Marquee Moon, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;stroke-width:0.688906"
+       x="30.361143"
+       y="171.87346"
+       id="text14318"><tspan
+         sodipodi:role="line"
+         id="tspan14316"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:99.2025px;font-family:'Marquee Moon';-inkscape-font-specification:'Marquee Moon, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;stroke-width:0.688906"
+         x="30.361143"
+         y="171.87346">R-Type</tspan></text>
+  </g>
+</svg>

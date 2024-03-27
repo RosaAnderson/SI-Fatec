@@ -1,0 +1,24 @@
+telas
+splash
+	pagina d abertura app
+login
+	pagina d campos d identificação e senha
+cadastro
+	cadastro inicial de dados basicos 
+perfil(editavel)
+	editavel foto e dados complementares do usuario,aparecer ou nao no rank geral
+pg principal/estatisticas
+	apresentara estatisticas comparativas semanais comparando semana anterior com a atual
+pg amigos(social)
+opções
+	
+scores
+	rank geral do app e suas conquistas
+rastreamento
+	localição gps/botao inicio,pause e fim/objetivos/desafio
+confugrações
+desafios
+criar desafios
+
+	
+	 
