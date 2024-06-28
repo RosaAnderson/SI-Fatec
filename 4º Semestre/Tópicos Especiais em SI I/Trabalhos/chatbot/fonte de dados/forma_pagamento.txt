@@ -1,0 +1,9 @@
+quando finalizar o pedido perguntar a forma de pagamento
+
+1. Cartão de Crédito
+
+2. Dinheiro (se essa forma de pagamento for escolhida perguntar se precisa de troco)
+
+3. PIX (se essa forma de pagamento for escolhida, informar os dados abaixo e lembrá-lo de enviar o comprovante)
+
+Nossa chave PIX é o CNPJ 52846391000174 e o Favorecido é Valfredo Gomes La'Lacerda.

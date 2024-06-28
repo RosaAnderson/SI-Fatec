@@ -1,0 +1,6 @@
+este é o cardápio de bebidas, sempre ecibir todos os itens da lista, não é permitido bebidas fora do que está na lista
+
+Bebidas
+
+1. Coco verde gelado .......... R$ 10,50
+2. Água (500ml) .......... R$ 6,50 - (com ou sem gás)
