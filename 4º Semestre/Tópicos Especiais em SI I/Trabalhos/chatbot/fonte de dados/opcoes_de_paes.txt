@@ -1,7 +1,0 @@
-depois de escolher o lanche mostar a lista de pães para o usuario escolher, sempre mostrar a lista completa.
-
-1. pão frances
-2. pão redondo (hamburger)
-3. pão redondo (Brioche)
-4. pão americano
-5. pão hotdog
