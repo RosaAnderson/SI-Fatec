@@ -1,0 +1,10 @@
+- estrutura básica
+- parágrafos
+- cabeçalho
+- linha horizontal
+- listas
+- tabelas
+- formulário
+- imagens
+- video e audio
+- links

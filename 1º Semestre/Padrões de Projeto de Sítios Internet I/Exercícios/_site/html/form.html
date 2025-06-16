@@ -1,0 +1,77 @@
+<!DOCTYPE HTML>
+	<html lang = "br">
+		<meta charset = "utf-8">
+
+		<head>
+			<title> Formulários - Anderson Rosa </title>
+		</head>
+
+		<body>
+			<h4> Anderson Rosa </h4>
+
+			página atual - Formulários
+		
+			<hr>
+
+			<a href = "index.html">		<button> Home				</button> </a>
+			<a href = "structure.html">	<button> Estrutura Básica	</button> </a>
+			<a href = "paragraph.html">	<button> Parágrafos			</button> </a>
+			<a href = "header.html">	<button> Cabeçalhos			</button> </a>
+			<a href = "line.html">		<button> Linha Horizontal	</button> </a>
+			<a href = "list.html">		<button> Listas				</button> </a>
+			<a href = "table.html">		<button> Tabelas				</button> </a>
+<!-- --			<a href = "form.html">		<button> Formulários			</button> </a> <!-- -->
+										<button style = "background-color: bisque;"> Formulários </button>
+			<a href = "images.html">	<button> Imagens			</button> </a>
+			<a href = "video.html">		<button> Videos				</button> </a>
+			<a href = "audio.html">		<button> Áudios				</button> </a>
+
+			<form>
+				<header>
+					<h3> Formulário </h3>
+					<p> Use o formulário abaixo para me enviar uma mensagem. </p>
+				</header>
+
+				<input type = "text"  name = "name"		id = "name"		value = "" placeholder = "Seu Nome"		required = ""> <br>
+				<input type = "email" name = "email"	id = "email"	value = "" placeholder = "Seu E-mail"	required = ""> <br>
+				<input type = "text"  name = "phone"	id = "phone"	value = "" placeholder = "Seu Telefone"	required = ""> <br>
+
+				<select name = "category" id = "category" required>
+					<option value = "">				Selecione...	</option>
+					<option value = "Orçamento">	Orçamento		</option>
+					<option value = "Compra">		Compra			</option>
+					<option value = "Sugestão">		Sugestão		</option>
+					<option value = "Reclamação">	Reclamação		</option>
+				</select> <br>
+
+				<textarea name = "message" id = "message" rows = "6" placeholder = "Escreva sua mensagem" required = ""></textarea> <br>
+
+				<input type = "checkbox" id = "no-robot" name = "no-robot" checked required = "">
+					<label for = "no-robot"> Não sou robô </label> <br>
+
+				<input type = "checkbox" id = "copy-to" name = "copy-to">
+					<label for = "copy-to"> Envie-me uma cópia </label> <br>
+
+				<input type = "submit" value = "Enviar">
+				<input type = "reset"  value = "Limpar">
+			</form>		
+
+			<hr>
+
+			<p> - Para criar um formulário basta inserir a instrução a seguir: </p>
+
+				&emsp; <b>&lt;form&gt;</b> <br>
+				&emsp;&emsp; <b>&lt;input type = "text" name = "name" id = "name" value = "" placeholder = "Nome" required = ""&gt;</b> <br>
+				&emsp;&emsp; <b>&lt;textarea name = "message" id = "message" rows = "6" placeholder = "Escreva sua mensagem" required = ""&gt; &lt;/textarea&gt;</b> <br>
+				&emsp;&emsp; <b>&lt;input type = "submit" value = "Enviar"&gt;</b> <br>
+				&emsp; <b>&lt;/form&gt;</b> <br>
+
+			<br>
+
+			<font color = "red"> Sim, <b>Ctrl + C / Ctrl + V</b> funciona, pode usar meu código.</font>
+
+			<hr>
+
+			<p> Copyright © 2022. by <a href = "https://andersonrosa.com.br/conecte-se" target = "_blank"> Anderson Rosa</a>.</p>
+		</body>
+	</html>
