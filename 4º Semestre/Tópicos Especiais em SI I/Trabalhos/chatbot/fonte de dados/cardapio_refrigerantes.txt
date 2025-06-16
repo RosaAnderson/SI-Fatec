@@ -1,0 +1,8 @@
+esse é o cardápio de refrigerantes, sempre exibir todos os itens da lista.
+
+
+1. Lata 350ml .......... R$ 5,00 - (Coca-Cola | Sprite | Fanta | Guaraná Antartica | Schepps)
+2. 1 Litro .......... R$ 9,00 - (Coca-Cola | Sprite | Fanta | Guaraná Antartica | Schepps)
+3. 2 Litros .......... R$ 12,50 - (Coca-Cola | Sprite | Fanta | Guaraná Antartica | Schepps)
+
+*** não permitir itens que não estejam na lista

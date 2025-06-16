@@ -1,0 +1,116 @@
+Lista
+
+1 - X-CASA .......... *R$ 39,00*
+
+2 - X-BACON .......... *R$ 35,00*
+
+3 - X-SALADA .......... *R$ 23,00*
+
+4 - X-TUDO .......... *R$ 60,00*
+
+5 - X-EGG .......... *R$ 25,00*
+
+6 - X-DELICIA .......... R$ 33,00*
+
+7 - X-CATUPIRY .......... *R$ 31,00*
+
+8 - X-BURGER .......... *R$ 20,00*
+
+9 - X-ESPECIAL .......... *R$ 41,00*
+
+10 - X-CAIPIRA .......... *R$ 28,00*
+
+11 - X-CALABRESA .......... *R$ 41,00*
+
+12 - MIGNON SIMPLES .......... *R$ 39,00*
+
+13 - MIGNON ESPECIAL .......... *R$ 69,00*
+
+14 - LOMBO SIMPLES .......... *R$ 22,00*
+
+15 - LOMBO ESPECIAL .......... *R$ 51,00*
+
+16 - FRANGO SIMPLES .......... *R$ 21,00*
+
+17 - FRANGO ESPECIAL .......... *R$ 55,00*
+
+18 - HOT DOG .......... *R$ 25,00*
+
+19 - BACON SIMPLES .......... *R$ 26,00*
+
+20 - AMERICANO .......... *R$ 25,00*
+
+21 - MISTO QUENTE .......... *R$ 21,00*
+
+22 - CHEDDAR ESPECIAL .......... *R$ 43,00*
+
+
+
+
+Cardápio
+
+1 - X-CASA .......... *R$ 39,00*
+    4 hamburgers, 2 ovos, alface, tomate e queijo prato.
+
+2 - X-BACON .......... *R$ 35,00*
+    2 hamburgers, mussarela, bacon, alface, tomate e cebola.
+
+3 - X-SALADA .......... *R$ 23,00*
+    2 hamburgers, mussarela, alface, tomate e cebola.
+
+4 - X-TUDO .......... *R$ 60,00*
+    2 hamburgers, mussarela, presunto, bacon, 2 ovos, alface, tomate, milho, ervilha, azeitona, cebola e catupiry.
+
+5 - X-EGG .......... *R$ 25,00*
+    2 hamburgers, 2 ovos e mussarela.
+
+6 - X-DELICIA .......... *R$ 33,00*
+    2 hamburgers, presunto, mussarela, bacon, milho.
+
+7 - X-CATUPIRY .......... *R$ 31,00*
+    2 hamburgers, presunto, mussarela, catupiry.
+
+8 - X-BURGER .......... *R$ 20,00*
+    2 hamburgers, presunto, mussarela.
+
+9 - X-ESPECIAL .......... *R$ 41,00*
+    2 hamburgers, bacon, catupiry, 2 ovos, alface, tomate, cebola frita, molho especial.
+
+10 - X-CAIPIRA .......... *R$ 28,00*
+    liguiça mista, queijo, 2 ovos, alface, tomate e cebola frita.
+
+11 - X-CALABRESA .......... *R$ 41,00*
+    calabresa, bacon, catupiry e tomate.
+
+12 - MIGNON SIMPLES .......... *R$ 39,00*
+    filé mignon, mussarela, tomate.
+
+13 - MIGNON ESPECIAL .......... *R$ 69,00*
+    filé mignon, bacon, catupiry, mussarela, tomate e alface.
+
+14 - LOMBO SIMPLES .......... *R$ 22,00*
+    lombo suino, tomate, mussarela.
+
+15 - LOMBO ESPECIAL .......... *R$ 51,00*
+    lombo suino, bacon, catupiry, mussarela, tomate e alface.
+
+16 - FRANGO SIMPLES .......... *R$ 21,00*
+    filé de frango, mussarela, tomate.
+
+17 - FRANGO ESPECIAL .......... *R$ 55,00*
+    filé de frango, mussarela, bacon, milho, tomate, batata plaha e catupiry.
+
+18 - HOT DOG .......... *R$ 25,00*
+    4 salsichas, mussarela, tomate, cebola, batata palha e molho.
+
+19 - BACON SIMPLES .......... *R$ 26,00*
+    2 hamburgers, 50g mussarela, 90g bacon, alface, tomate e cebola.
+
+20 - AMERICANO .......... *R$ 25,00*
+    presunto, mussarela, 2 ovos, alface e tomate.
+
+21 - MISTO QUENTE .......... *R$ 21,00*
+    presunto, mussarela e tomate.
+
+22 - CHEDDAR ESPECIAL .......... *R$ 43,00*
+    2 hamburgers, presunto, bacon e cheddar.

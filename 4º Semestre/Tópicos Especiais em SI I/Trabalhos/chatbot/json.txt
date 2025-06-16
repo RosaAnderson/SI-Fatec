@@ -1,0 +1,269 @@
+{
+  "description": "A New Flow",
+  "states": [
+    {
+      "name": "Trigger",
+      "type": "trigger",
+      "transitions": [
+        {
+          "next": "boas_vindas",
+          "event": "incomingMessage"
+        },
+        {
+          "event": "incomingCall"
+        },
+        {
+          "event": "incomingConversationMessage"
+        },
+        {
+          "event": "incomingRequest"
+        },
+        {
+          "event": "incomingParent"
+        }
+      ],
+      "properties": {
+        "offset": {
+          "x": 0,
+          "y": 0
+        }
+      }
+    },
+    {
+      "name": "boas_vindas",
+      "type": "send-and-wait-for-reply",
+      "transitions": [
+        {
+          "next": "cardapio_ou_lanche",
+          "event": "incomingMessage"
+        },
+        {
+          "next": "timeout",
+          "event": "timeout"
+        },
+        {
+          "next": "boas_vindas",
+          "event": "deliveryFailure"
+        }
+      ],
+      "properties": {
+        "offset": {
+          "x": -190,
+          "y": 250
+        },
+        "service": "{{trigger.message.InstanceSid}}",
+        "channel": "{{trigger.message.ChannelSid}}",
+        "from": "{{flow.channel.address}}",
+        "message_type": "custom",
+        "body": "Olá, eu sou o gulosinho, assistente virtual do Gostosura Lanches.\nVou te ajudar na escolha e processo de compra do seu lanche. Você já sabe qual lanche vai pedir? \n\nEscolha:\n1 - Sim\n2 - Ver cardápio",
+        "timeout": "90"
+      }
+    },
+    {
+      "name": "cardapio_ou_lanche",
+      "type": "split-based-on",
+      "transitions": [
+        {
+          "next": "sem_combinacao_boas_vindas",
+          "event": "noMatch"
+        },
+        {
+          "next": "iniciar_pedido",
+          "event": "match",
+          "conditions": [
+            {
+              "friendly_name": "sim",
+              "arguments": [
+                "{{widgets.boas_vindas.inbound.Body}}"
+              ],
+              "type": "matches_any_of",
+              "value": "1, 1., 1-, 1 , sim, sei, já, ja, tenho"
+            }
+          ]
+        },
+        {
+          "next": "cardapio",
+          "event": "match",
+          "conditions": [
+            {
+              "friendly_name": "cardapio",
+              "arguments": [
+                "{{widgets.boas_vindas.inbound.Body}}"
+              ],
+              "type": "matches_any_of",
+              "value": "2, 2., 2-, 2 , não, não sei, nao, não tenho, nao tenho, cardapio, ver, ver cardapio"
+            }
+          ]
+        }
+      ],
+      "properties": {
+        "input": "{{widgets.boas_vindas.inbound.Body}}",
+        "offset": {
+          "x": -560,
+          "y": 510
+        }
+      }
+    },
+    {
+      "name": "iniciar_pedido",
+      "type": "send-and-wait-for-reply",
+      "transitions": [
+        {
+          "next": "selecionar_lanche",
+          "event": "incomingMessage"
+        },
+        {
+          "next": "timeout",
+          "event": "timeout"
+        },
+        {
+          "next": "iniciar_pedido",
+          "event": "deliveryFailure"
+        }
+      ],
+      "properties": {
+        "offset": {
+          "x": -720,
+          "y": 920
+        },
+        "service": "{{trigger.message.InstanceSid}}",
+        "channel": "{{trigger.message.ChannelSid}}",
+        "from": "{{flow.channel.address}}",
+        "message_type": "custom",
+        "body": "Maravilha, diz pra mim qual dos lanches você quer:\n\n1 - X-CASA .......... *R$ 39,00*\n\n2 - X-BACON .......... *R$ 35,00*\n\n3 - X-SALADA .......... *R$ 23,00*\n\n4 - X-TUDO .......... *R$ 60,00*\n\n5 - X-EGG .......... *R$ 25,00*\n\n6 - X-DELICIA .......... R$ 33,00*\n\n7 - X-CATUPIRY .......... *R$ 31,00*\n\n8 - X-BURGER .......... *R$ 20,00*\n\n9 - X-ESPECIAL .......... *R$ 41,00*\n\n10 - X-CAIPIRA .......... *R$ 28,00*\n\n11 - X-CALABRESA .......... *R$ 41,00*\n\n12 - MIGNON SIMPLES .......... *R$ 39,00*\n\n13 - MIGNON ESPECIAL .......... *R$ 69,00*\n\n14 - LOMBO SIMPLES .......... *R$ 22,00*\n\n15 - LOMBO ESPECIAL .......... *R$ 51,00*\n\n16 - FRANGO SIMPLES .......... *R$ 21,00*\n\n17 - FRANGO ESPECIAL .......... *R$ 55,00*\n\n18 - HOT DOG .......... *R$ 25,00*\n\n19 - BACON SIMPLES .......... *R$ 26,00*\n\n20 - AMERICANO .......... *R$ 25,00*\n\n21 - MISTO QUENTE .......... *R$ 21,00*\n\n22 - CHEDDAR ESPECIAL .......... *R$ 43,00*",
+        "timeout": "3600"
+      }
+    },
+    {
+      "name": "timeout",
+      "type": "send-message",
+      "transitions": [
+        {
+          "event": "sent"
+        },
+        {
+          "next": "timeout",
+          "event": "failed"
+        }
+      ],
+      "properties": {
+        "offset": {
+          "x": 370,
+          "y": 1290
+        },
+        "service": "{{trigger.message.InstanceSid}}",
+        "channel": "{{trigger.message.ChannelSid}}",
+        "from": "{{flow.channel.address}}",
+        "message_type": "custom",
+        "to": "{{contact.channel.address}}",
+        "body": "Acho que esqueceu de mim, mas não tem problema, quando precisar estarei por aqui pra te atender!! :)"
+      }
+    },
+    {
+      "name": "sem_combinacao_boas_vindas",
+      "type": "send-and-wait-for-reply",
+      "transitions": [
+        {
+          "next": "cardapio_ou_lanche",
+          "event": "incomingMessage"
+        },
+        {
+          "next": "timeout",
+          "event": "timeout"
+        },
+        {
+          "next": "sem_combinacao_boas_vindas",
+          "event": "deliveryFailure"
+        }
+      ],
+      "properties": {
+        "offset": {
+          "x": -880,
+          "y": 250
+        },
+        "service": "{{trigger.message.InstanceSid}}",
+        "channel": "{{trigger.message.ChannelSid}}",
+        "from": "{{flow.channel.address}}",
+        "message_type": "custom",
+        "body": "Desculpe, não entendi o que disse!\n\nSou jovem, mas estou aprendendo rápido, então por favor responda escolhendo \"*1*\" ou \"*2*\" de acordo com as opções abaixo: \n\n1 - Já sei que lanche quero\n2 - Quero ver o cardápio",
+        "timeout": "3600"
+      }
+    },
+    {
+      "name": "cardapio",
+      "type": "send-and-wait-for-reply",
+      "transitions": [
+        {
+          "next": "selecionar_lanche",
+          "event": "incomingMessage"
+        },
+        {
+          "next": "timeout",
+          "event": "timeout"
+        },
+        {
+          "next": "cardapio",
+          "event": "deliveryFailure"
+        }
+      ],
+      "properties": {
+        "offset": {
+          "x": -270,
+          "y": 920
+        },
+        "service": "{{trigger.message.InstanceSid}}",
+        "channel": "{{trigger.message.ChannelSid}}",
+        "from": "{{flow.channel.address}}",
+        "message_type": "custom",
+        "body": "Tudo bem, aqui está nosso cardápio, escolha o lanche que deseja.\n\n1 - X-CASA .......... *R$ 39,00*\n    4 hamburgers, 2 ovos, alface, tomate e queijo prato.\n\n2 - X-BACON .......... *R$ 35,00*\n    2 hamburgers, mussarela, bacon, alface, tomate e cebola.\n\n3 - X-SALADA .......... *R$ 23,00*\n    2 hamburgers, mussarela, alface, tomate e cebola.\n\n4 - X-TUDO .......... *R$ 60,00*\n    2 hamburgers, mussarela, presunto, bacon, 2 ovos, alface, tomate, milho, ervilha, azeitona, cebola e catupiry.\n\n5 - X-EGG .......... *R$ 25,00*\n    2 hamburgers, 2 ovos e mussarela.\n\n6 - X-DELICIA .......... *R$ 33,00*\n    2 hamburgers, presunto, mussarela, bacon, milho.\n\n7 - X-CATUPIRY .......... *R$ 31,00*\n    2 hamburgers, presunto, mussarela, catupiry.\n\n8 - X-BURGER .......... *R$ 20,00*\n    2 hamburgers, presunto, mussarela.\n\n9 - X-ESPECIAL .......... *R$ 41,00*\n    2 hamburgers, bacon, catupiry, 2 ovos, alface, tomate, cebola frita, molho especial.\n\n10 - X-CAIPIRA .......... *R$ 28,00*\n    liguiça mista, queijo, 2 ovos, alface, tomate e cebola frita.\n\n11 - X-CALABRESA .......... *R$ 41,00*\n    calabresa, bacon, catupiry e tomate.\n\n12 - MIGNON SIMPLES .......... *R$ 39,00*\n    filé mignon, mussarela, tomate.\n\n13 - MIGNON ESPECIAL .......... *R$ 69,00*\n    filé mignon, bacon, catupiry, mussarela, tomate e alface.\n\n14 - LOMBO SIMPLES .......... *R$ 22,00*\n    lombo suino, tomate, mussarela.\n\n15 - LOMBO ESPECIAL .......... *R$ 51,00*\n    lombo suino, bacon, catupiry, mussarela, tomate e alface.\n\n16 - FRANGO SIMPLES .......... *R$ 21,00*\n    filé de frango, mussarela, tomate.\n\n17 - FRANGO ESPECIAL .......... *R$ 55,00*\n    filé de frango, mussarela, bacon, milho, tomate, batata plaha e catupiry.\n\n18 - HOT DOG .......... *R$ 25,00*\n    4 salsichas, mussarela, tomate, cebola, batata palha e molho.\n\n19 - BACON SIMPLES .......... *R$ 26,00*\n    2 hamburgers, 50g mussarela, 90g bacon, alface, tomate e cebola.\n\n20 - AMERICANO .......... *R$ 25,00*\n    presunto, mussarela, 2 ovos, alface e tomate.\n\n21 - MISTO QUENTE .......... *R$ 21,00*\n    presunto, mussarela e tomate.\n\n22 - CHEDDAR ESPECIAL .......... *R$ 43,00*\n    2 hamburgers, presunto, bacon e cheddar.",
+        "timeout": "3600"
+      }
+    },
+    {
+      "name": "selecionar_lanche",
+      "type": "split-based-on",
+      "transitions": [
+        {
+          "event": "noMatch"
+        },
+        {
+          "event": "match",
+          "conditions": [
+            {
+              "friendly_name": "1",
+              "arguments": [
+                "{{widgets.boas_vindas.inbound.Body}}"
+              ],
+              "type": "matches_any_of",
+              "value": "1, 1., 1-, 1"
+            }
+          ]
+        },
+        {
+          "event": "match",
+          "conditions": [
+            {
+              "friendly_name": "2",
+              "arguments": [
+                "{{widgets.boas_vindas.inbound.Body}}"
+              ],
+              "type": "matches_any_of",
+              "value": "2, 2., 2-, 2"
+            }
+          ]
+        }
+      ],
+      "properties": {
+        "input": "{{widgets.boas_vindas.inbound.Body}}",
+        "offset": {
+          "x": -480,
+          "y": 1360
+        }
+      }
+    }
+  ],
+  "initial_state": "Trigger",
+  "flags": {
+    "allow_concurrent_calls": true
+  }
+}
