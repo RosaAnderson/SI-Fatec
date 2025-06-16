@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700" rel="stylesheet">
+    <title>Mr.books</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Additional CSS Files -->
+    <link rel="stylesheet" href="assets/css/fontawesome.css">
+    <link rel="stylesheet" href="assets/css/tooplate-main.css">
+    <link rel="stylesheet" href="assets/css/owl.css">
+    <link rel="stylesheet" href="assets/css/form.css">
+
+    <style>
+        body {
+            background: url('') no-repeat center center fixed;
+            background-size: cover;
+            font-family: 'Roboto', sans-serif;
+        }
+    </style>
+</head>
+
+<!-- Navigation -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark static-top">
+    <div class="container">
+        <a class="navbar-brand" href="#"><img src="assets/images/header-logo(2).png" alt=""></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive"
+            aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="index.html">Inicio</a>
+                </li>
+                <li class="nav-item active">
+                    <a class="nav-link" href="products.html">Produtos
+                        <span class="sr-only">(current)</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="about.html">Sobre</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="contact.html">Contato</a>
+                </li>
+            </ul>
+        </div>
+        <div>
+            <a href="login.html" class="btn btn-primary">Entrar</a>
+        </div>
+    </div>
+</nav>
+<!-- Form Starts Here -->
+<form action="#" method="POST">
+    <br><br>
+    <h4>Dados Pessoais</h4>
+    <br>
+
+    <div class="mb-3">
+        <label for="nome" class="form-label">Nome</label>
+        <input type="text" name="nome" class="form-control" id="nome" placeholder="Digite o nome">
+    </div>
+
+    <div class="mb-3">
+        <label for="email" class="form-label">E-mail</label>
+        <input type="email" name="email" class="form-control" id="email" placeholder="Digite o e-mail" required>
+    </div>
+
+    <div class="mb-3">
+        <label for="senha" class="form-label">Senha</label>
+        <input type="password" name="senha" class="form-control" id="senha" placeholder="Digite a senha" required>
+    </div>
+
+    <div class="mb-3">
+        <label for="cpf" class="form-label">CPF</label>
+        <input type="text" name="cpf" class="form-control" id="cpf" placeholder="Digite o CPF" required>
+    </div>
+
+    <div class="mb-3">
+        <label for="datanasc" class="form-label">Data de Nascimento</label>
+        <input type="date" name="datanasc" class="form-control" id="datanasc" required>
+    </div>
+
+    <div class="mb-3">
+        <label for="tipo" class="form-label">Tipo de Usuário</label>
+        <select id="tipo" name="tipo" class="form-select" required>
+            <option value="0">Escolha o tipo de usuário.</option>
+            <option value="Usuário">Usuário</option>
+            <option value="Administrador">Administrador</option>
+        </select>
+    </div>
+
+
+    <div class="mb-3">
+        <label for="ddd" class="form-label">DDD</label>
+        <select name="ddd" id="ddd" class="form-select" required>
+            <option value="">Selecione o DDD</option>
+            <option value="11">11 - São Paulo</option>
+            <option value="12">12 - São Paulo</option>
+            <option value="13">13 - São Paulo</option>
+            <option value="14">14 - São Paulo</option>
+            <option value="15">15 - São Paulo</option>
+            <option value="16">16 - São Paulo</option>
+            <option value="17">17 - São Paulo</option>
+            <option value="18">18 - São Paulo</option>
+            <option value="19">19 - São Paulo</option>
+            <option value="21">21 - Rio de Janeiro</option>
+            <option value="22">22 - Rio de Janeiro</option>
+            <option value="24">24 - Rio de Janeiro</option>
+            <option value="27">27 - Espírito Santo</option>
+            <option value="28">28 - Espírito Santo</option>
+            <option value="31">31 - Minas Gerais</option>
+            <option value="32">32 - Minas Gerais</option>
+            <option value="33">33 - Minas Gerais</option>
+            <option value="34">34 - Minas Gerais</option>
+            <option value="35">35 - Minas Gerais</option>
+            <option value="37">37 - Minas Gerais</option>
+            <option value="38">38 - Minas Gerais</option>
+            <option value="41">41 - Paraná</option>
+            <option value="42">42 - Paraná</option>
+            <option value="43">43 - Paraná</option>
+            <option value="44">44 - Paraná</option>
+            <option value="45">45 - Paraná</option>
+            <option value="46">46 - Paraná</option>
+            <option value="47">47 - Santa Catarina</option>
+            <option value="48">48 - Santa Catarina</option>
+            <option value="49">49 - Santa Catarina</option>
+            <option value="51">51 - Rio Grande do Sul</option>
+            <option value="53">53 - Rio Grande do Sul</option>
+            <option value="54">54 - Rio Grande do Sul</option>
+            <option value="55">55 - Rio Grande do Sul</option>
+            <option value="61">61 - Distrito Federal</option>
+            <option value="62">62 - Goiás</option>
+            <option value="63">63 - Tocantins</option>
+            <option value="64">64 - Goiás</option>
+            <option value="65">65 - Mato Grosso</option>
+            <option value="66">66 - Mato Grosso</option>
+            <option value="67">67 - Mato Grosso do Sul</option>
+            <option value="68">68 - Acre</option>
+            <option value="69">69 - Rondônia</option>
+            <option value="71">71 - Bahia</option>
+            <option value="73">73 - Bahia</option>
+            <option value="74">74 - Bahia</option>
+            <option value="75">75 - Bahia</option>
+            <option value="77">77 - Bahia</option>
+            <option value="79">79 - Sergipe</option>
+            <option value="81">81 - Pernambuco</option>
+            <option value="82">82 - Alagoas</option>
+            <option value="83">83 - Paraíba</option>
+            <option value="84">84 - Rio Grande do Norte</option>
+            <option value="85">85 - Ceará</option>
+            <option value="86">86 - Piauí</option>
+            <option value="87">87 - Pernambuco</option>
+            <option value="88">88 - Ceará</option>
+            <option value="89">89 - Piauí</option>
+            <option value="91">91 - Pará</option>
+            <option value="92">92 - Amazonas</option>
+            <option value="93">93 - Pará</option>
+            <option value="94">94 - Pará</option>
+            <option value="95">95 - Roraima</option>
+            <option value="96">96 - Amapá</option>
+            <option value="97">97 - Amazonas</option>
+            <option value="98">98 - Maranhão</option>
+            <option value="99">99 - Maranhão</option>
+        </select>
+        </select>
+    </div>
+
+    <div class="mb-3">
+        <label for="telefone" class="form-label">Telefone (Sem DDD)</label>
+        <input type="text" name="telefone" class="form-control" id="telefone" placeholder="Digite o telefone" required>
+    </div>
+
+    <br><br>
+    <h4>Endereço</h4>
+    <br>
+
+    <div class="mb-3">
+        <label for="logradouro" class="form-label">Logradouro</label>
+        <input type="text" name="logradouro" class="form-control" id="logradouro" placeholder="Digite o logradouro"
+            required>
+    </div>
+
+    <div class="mb-3">
+        <label for="numerocasa" class="form-label">Número da Casa</label>
+        <input type="number" name="numerocasa" class="form-control" id="numerocasa"
+            placeholder="Digite o número da casa" required>
+    </div>
+
+    <div class="mb-3">
+        <label for="bairro" class="form-label">Bairro</label>
+        <input type="text" name="bairro" class="form-control" id="bairro" placeholder="Digite o bairro" required>
+    </div>
+
+    <div class="mb-3">
+        <label for="cep" class="form-label">CEP</label>
+        <input type="number" name="cep" class="form-control" id="cep" placeholder="Digite o CEP" required>
+    </div>
+
+    <div class="mb-3">
+        <label for="complemento" class="form-label">Complemento (Opcional)</label>
+        <input type="text" name="complemento" class="form-control" id="complemento" placeholder="Digite o complemento">
+    </div>
+
+    <div class="mb-3">
+        <label for="uf" class="form-label">UF</label>
+        <select name="uf" id="uf" class="form-select" required>
+            <option value="">Selecione o estado</option>
+            <option value="AC">Acre</option>
+            <option value="AL">Alagoas</option>
+            <option value="AP">Amapá</option>
+            <option value="AM">Amazonas</option>
+            <option value="BA">Bahia</option>
+            <option value="CE">Ceará</option>
+            <option value="DF">Distrito Federal</option>
+            <option value="ES">Espírito Santo</option>
+            <option value="GO">Goiás</option>
+            <option value="MA">Maranhão</option>
+            <option value="MT">Mato Grosso</option>
+            <option value="MS">Mato Grosso do Sul</option>
+            <option value="MG">Minas Gerais</option>
+            <option value="PA">Pará</option>
+            <option value="PB">Paraíba</option>
+            <option value="PR">Paraná</option>
+            <option value="PE">Pernambuco</option>
+            <option value="PI">Piauí</option>
+            <option value="RJ">Rio de Janeiro</option>
+            <option value="RN">Rio Grande do Norte</option>
+            <option value="RS">Rio Grande do Sul</option>
+            <option value="RO">Rondônia</option>
+            <option value="RR">Roraima</option>
+            <option value="SC">Santa Catarina</option>
+            <option value="SP">São Paulo</option>
+            <option value="SE">Sergipe</option>
+            <option value="TO">Tocantins</option>
+            <!-- Add other UF options here -->
+        </select>
+    </div>
+
+    <div class="mb-3">
+        <label for="cidade" class="form-label">Cidade</label>
+        <select name="cidade" id="cidade" class="form-select" required disabled>
+            <option value="">Selecione uma cidade</option>
+            <!-- As cidades serão adicionadas aqui pelo JavaScript -->
+        </select>
+    </div>
+
+    <br>
+    <div class="text-center">
+        <button type="submit" class="btn btn-primary">Cadastrar Usuário</button>
+    </div>
+    <br>
+</form>
+<!-- Form Ends Here -->
+
+<!-- Footer Starts Here -->
+<div class="footer">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="logo">
+                    <img src="assets/images/footer-img.png" alt="">
+                </div>
+            </div>
+            <div class="col-md-12">
+                <div class="footer-menu">
+                    <ul>
+                        <li><a href="#">Inicio</a></li>
+                        <li><a href="#">Produtos</a></li>
+                        <li><a href="#">Sobre</a></li>
+                        <li><a href="#">Contato</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-md-12">
+                <div class="social-icons">
+                    <ul>
+                        <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                        <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                        <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+                        <li><a href="#"><i class="fa fa-rss"></i></a></li>
+                        <li><a href="#"><i class="fa fa-behance"></i></a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-md-12">
+                <div class="copyright">
+                    <p>Copyright &copy; 2019 Mr. books</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Footer Ends Here -->
+
+<!-- Bootstrap core JavaScript -->
+<script src="vendor/jquery/jquery.min.js"></script>
+<script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+<!-- Additional Scripts -->
+<script src="assets/js/custom.js"></script>
+<script src="assets/js/owl.js"></script>
+<script src="assets/js/slick.js"></script>
+<script src="assets/js/accordions.js"></script>
+
+<script>
+    const citiesByState = {
+        "AC": ["Rio Branco", "Cruzeiro do Sul", "Sena Madureira", "Feijó", "Tarauacá", "Porto Acre", "Plácido de Castro", "Xapuri", "Brasiléia", "Senador Guiomard"],
+        "AL": ["Maceió", "Arapiraca", "Palmeira dos Índios", "Rio Largo", "São Miguel dos Campos", "Arapiraca", "Penedo", "Marechal Deodoro", "Santana do Ipanema", "Coruripe"],
+        "AP": ["Macapá", "Santana", "Laranjal do Jari", "Oiapoque", "Mazagão", "Porto Grande", "Tartarugalzinho", "Serra do Navio", "Pedra Branca do Amapari", "Ferreira Gomes"],
+        "AM": ["Manaus", "Parintins", "Itacoatiara", "Coari", "Manacapuru", "Tefé", "Tabatinga", "Humaitá", "Eirunepé", "Maués"],
+        "BA": ["Salvador", "Feira de Santana", "Vitória da Conquista", "Camaçari", "Itabuna", "Juazeiro", "Lauro de Freitas", "Ilhéus", "Jequié", "Teixeira de Freitas"],
+        "CE": ["Fortaleza", "Juazeiro do Norte", "Sobral", "Maracanaú", "Caucaia", "Itapipoca", "Crato", "Quixadá", "Iguatu", "Pacatuba"],
+        "DF": ["Brasília", "Ceilândia", "Taguatinga", "Gama", "Samambaia", "Planaltina", "Santa Maria", "Paranoá", "Sobradinho", "Águas Claras"],
+        "ES": ["Vitória", "Vila Velha", "Serra", "Cariacica", "Linhares", "Cachoeiro de Itapemirim", "Viana", "Nova Venécia", "Aracruz", "Guarapari"],
+        "GO": ["Goiânia", "Aparecida de Goiânia", "Anápolis", "Rio Verde", "Luziânia", "Águas Lindas de Goiás", "Valparaíso de Goiás", "Trindade", "Formosa", "Novo Gama"],
+        "MA": ["São Luís", "Imperatriz", "Caxias", "Timon", "Codó", "Paço do Lumiar", "Açailândia", "Bacabal", "Balsas", "Barra do Corda"],
+        "MT": ["Cuiabá", "Várzea Grande", "Rondonópolis", "Sinop", "Tangará da Serra", "Cáceres", "Sorriso", "Barra do Garças", "Primavera do Leste", "Lucas do Rio Verde"],
+        "MS": ["Campo Grande", "Dourados", "Três Lagoas", "Corumbá", "Ponta Porã", "Naviraí", "Nova Andradina", "Paranaíba", "Maracaju", "Aquidauana"],
+        "MG": ["Belo Horizonte", "Uberlândia", "Contagem", "Juiz de Fora", "Betim", "Montes Claros", "Ribeirão das Neves", "Uberaba", "Governador Valadares", "Ipatinga"],
+        "PA": ["Belém", "Ananindeua", "Santarém", "Marabá", "Castanhal", "Parauapebas", "Itaituba", "Marituba", "Abaetetuba", "Cametá"],
+        "PB": ["João Pessoa", "Campina Grande", "Santa Rita", "Patos", "Bayeux", "Sousa", "Cajazeiras", "Cabedelo", "Guarabira", "Itabaiana"],
+        "PR": ["Curitiba", "Londrina", "Maringá", "Ponta Grossa", "Cascavel", "São José dos Pinhais", "Foz do Iguaçu", "Colombo", "Guarapuava", "Paranaguá"],
+        "PE": ["Recife", "Jaboatão dos Guararapes", "Olinda", "Caruaru", "Paulista", "Petrolina", "Cabo de Santo Agostinho", "Camaragibe", "Garanhuns", "Vitória de Santo Antão"],
+        "PI": ["Teresina", "Parnaíba", "Picos", "Floriano", "Piripiri", "Campo Maior", "São Raimundo Nonato", "Barras", "Miguel Alves", "José de Freitas"],
+        "RJ": ["Rio de Janeiro", "São Gonçalo", "Duque de Caxias", "Nova Iguaçu", "Niterói", "Belford Roxo", "Campos dos Goytacazes", "São João de Meriti", "Petrópolis", "Volta Redonda"],
+        "RN": ["Natal", "Mossoró", "Parnamirim", "Caicó", "Macau", "Ceará-Mirim", "Açu", "Currais Novos", "São Gonçalo do Amarante", "Extremoz"],
+        "RS": ["Porto Alegre", "Caxias do Sul", "Pelotas", "Canoas", "Santa Maria", "Gravataí", "Viamão", "Novo Hamburgo", "São Leopoldo", "Rio Grande"],
+        "RO": ["Porto Velho", "Ji-Paraná", "Ariquemes", "Vilhena", "Cacoal", "Guajará-Mirim", "Jaru", "Rolim de Moura", "Pimenta Bueno", "Ouro Preto do Oeste"],
+        "RR": ["Boa Vista", "Rorainópolis", "Caracaraí", "Pacaraima", "Mucajaí", "Alto Alegre", "São João da Baliza", "Bonfim", "São Luiz", "Caroebe"],
+        "SC": ["Florianópolis", "Joinville", "Blumenau", "São José", "Criciúma", "Chapecó", "Itajaí", "Lages", "Jaraguá do Sul", "Palhoça"],
+        "SP": ["São Paulo", "Campinas", "Santos", "São José dos Campos", "Ribeirão Preto", "Sorocaba", "Mauá", "São Bernardo do Campo", "Santo André", "Osasco"],
+        "SE": ["Aracaju", "Nossa Senhora do Socorro", "Lagarto", "Itabaiana", "Estância", "São Cristóvão", "Tobias Barreto", "Laranjeiras", "Simão Dias", "Nossa Senhora da Glória"],
+        "TO": ["Palmas", "Araguaína", "Gurupi", "Porto Nacional", "Paraíso do Tocantins", "Guaraí", "Araguatins", "Colinas do Tocantins", "Miracema do Tocantins", "Dianópolis"]
+    };
+
+    document.getElementById('uf').addEventListener('change', function () {
+        const uf = this.value;
+        const citySelect = document.getElementById('cidade');
+        citySelect.innerHTML = '<option value="">Selecione uma cidade</option>';
+
+        if (uf) {
+            const cities = citiesByState[uf];
+            cities.forEach(function (city) {
+                const option = document.createElement('option');
+                option.value = city;
+                option.textContent = city;
+                citySelect.appendChild(option);
+            });
+            citySelect.disabled = false;
+        } else {
+            citySelect.disabled = true;
+        }
+    });
+</script>
+
+</body>
+
+</html>
