@@ -1,0 +1,29 @@
+requisitos do sistema
+
+==================================================================================================
+criar tela de cadastro de participante com formuládio deve conter o campos para:
+--------------------------------------------------------------------------------------------------
+primeiro nome
+ultimo nome (sobrenome)
+CPF
+e-mail
+telefone/celular/whatsapp
+senha
+curso
+ano e periodo de ingresso na faculdade (ex.: 2022/2)
+capcha
+
+==================================================================================================
+o cadastro deve gerar um e-mail de confirmação
+--------------------------------------------------------------------------------------------------
+ele deve conter os dados usados no cadastro, inclusive a senha
+deve conter um botão para confirmar o cadastro
+deve haver um link que possa ser copiado caso o botão não funcione 
+
+
+
+
+
+--------------------------------------------------------------------------------------------------
+gerar qrcode para cada palestra
+
