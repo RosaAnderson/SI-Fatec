@@ -1,0 +1,37 @@
+Rodinei: bom dia.
+
+Luis: bom dia.
+
+Rodinei: e ai Luis, como está a finalização daquele novo algoritimo?
+
+Luis: está quase pronto, acredito que finalizaremos em uns três ou cinco dias.
+
+rodinei: maravilha, antes do planejado!
+
+Rodinei: bom dia vitor.
+
+vitor: bom dia. Um cliente ligou e perguntou se podemos fazer uma mudança no layout de uma de nossas telas, os detalhes estão na sua mesa.
+
+rodinei: vou analisar junto com o Anderson e se aprovado passamos para o desenvolvimento, valeu!
+
+Vitor: eu comentei com o Anderson, ele deu uma olhada e disse que dá pra fazer, só precisa ver com você a viabilidade.
+
+rodinei: o Anderson está aí?
+
+Luis: não, está de dispensa!
+
+cris: Mas está trabalhando de home office.
+
+Vitor: Cris, quaele ajuste no layout vc já finalizou, o cliente está com dificuldades em finalizar o cadastro!
+
+Cris: está pronto mas vai depender de algumas atualizações no algoritimo que o Anderson e o Luis estão finalizando.
+
+Rodinei: Vitor segundo o luis fica pronto em 5 dias, liga e avisa o cliente.
+
+
+
+
+
+
+
+
