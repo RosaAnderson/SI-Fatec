@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Exemplo Ajax</title>
+</head>
+<body onload="iniciar()">
+	<br>
+<div>
+	<p> usei console.log</p>
+</div>
+	
+<script>
+	function iniciar()
+	{
+		var obj = false;
+		
+		obj = new XMLHttpRequest();
+		
+		if(obj)
+		{
+			obj.onreadystatechange = function(){
+				
+				if(obj.readyState == 4)
+				{
+					if(obj.status == 200 || obj.status == 304)
+					{
+						var dados = obj.responseXML;
+						
+						var estado    = dados.getElementsByTagName("UF");
+						var cidade    = dados.getElementsByTagName("CIDADE");
+						var capital   = dados.getElementsByTagName("CAPITAL");
+						var habitante = dados.getElementsByTagName("HABITANTES");
+
+						for(i=0; i<estado.length; i++)
+						{
+							console.log(estado[i].firstChild.nodeValue);
+							console.log(cidade[i].firstChild.nodeValue);
+							console.log(capital[i].firstChild.nodeValue);
+							console.log(habitante[i].firstChild.nodeValue);
+						}
+					}
+					else	
+					{
+						alert("Problema na comunicação com o servidor");
+					}
+				}
+			};	
+			
+			obj.open("GET", "estados.xml", true);
+			obj.send();	
+		}
+	}
+	
+</script>
+</body>
+</html>

@@ -1,0 +1,109 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Avaliação Substitutiva - Exercício 1</title>
+	</head>
+	<body onload='carregar()'>
+		<h1>Notas dos Alunos</h1>
+		<br>
+		<table border="1">
+			<thead>
+				<tr>
+					<th>Nome</th>
+					<th>P1</th>
+					<th>P2</th>
+					<th>Média</th>
+				</tr>
+			</thead>
+			<tbody id="tb"></tbody>
+		</table>
+		<br>
+		<button onclick='calcular()'>Enviar</button>
+	</body>
+	
+	<script>
+		function carregar()
+		{
+			var obj = false;
+			
+			obj = new XMLHttpRequest();
+			
+			if(obj)
+			{
+				obj.onreadystatechange = function(){
+					
+					if(obj.readyState == 4)
+					{
+						if(obj.status == 200 || obj.status == 304)
+						{
+							var dados = obj.responseXML;
+							
+							var nome = dados.getElementsByTagName("NOME");
+							
+							for(i=0; i<nome.length; i++)
+							{
+								console.log(nome[i].firstChild.nodeValue);
+
+								let nom = nome[i].firstChild.nodeValue;
+
+								let tr  = document.createElement("tr");
+
+								let td1 = document.createElement("td");
+									let col1 = document.createTextNode(nom);
+								
+								let td2 = document.createElement("td");
+									let col2 = document.createElement("input");
+										col2.setAttribute("type","input");
+										col2.setAttribute("id", "txt0" + i);
+
+								let td3 = document.createElement("td");
+									let col3 = document.createElement("input");
+										col3.setAttribute("type","input");
+										col3.setAttribute("id", "txt1" + i);
+
+								let td4 = document.createElement("td");
+									let col4 = document.createTextNode("");
+
+								td1.appendChild(col1);
+								tr.appendChild(td1);
+
+								td2.appendChild(col2);
+								tr.appendChild(td2);
+
+								td3.appendChild(col3);
+								tr.appendChild(td3);
+
+								td4.appendChild(col4);
+								tr.appendChild(td4);
+
+								document.getElementById("tb").appendChild(tr);
+							}
+						}
+						else	
+						{
+							alert("Problema na comunicação com o servidor");
+						}
+					}
+				};	
+				
+				obj.open("GET", "alunos.xml", true);
+				obj.send();	
+			}
+		}
+		
+		function calcular()
+		{
+			var fields = document.querySelectorAll("input");
+		
+			for(i=0; i<fields.length; i++)
+			{
+				var vp1 = parseFloat(document.getElementById("txt0" + i).value);
+				var vp2 = parseFloat(document.getElementById("txt1" + i).value);
+				var vmd = ((vp1 + vp2) / 2);
+
+				console.log(vmd);
+			}
+		}
+	</script>
+</html>

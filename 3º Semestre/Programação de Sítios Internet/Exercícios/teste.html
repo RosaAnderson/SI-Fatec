@@ -1,0 +1,39 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Escopo de variáveis</title>
+	</head>
+	<body>
+		<script>
+			var nome = "Mariana";
+			let x = 10;
+			teste();
+			function teste()
+			{
+				var nome = "Pedro";
+				alert(x);
+				alert(nome);
+			}
+			
+			alert(nome);
+			
+			if(nome == "Mariana")
+			{
+				let nome2 = nome + " Souza";
+				alert(nome2);
+				const nome3 = "Maria da Silva";
+				//nome3 = "João";
+			}
+			
+			function soma(x , y)
+			{
+				var soma = x + y;
+				return soma;
+			}
+			//chamada da função
+			var retorno = soma(2,4);
+			alert(retorno);
+		</script>
+	</body>
+</html>

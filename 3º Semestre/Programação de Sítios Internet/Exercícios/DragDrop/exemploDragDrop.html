@@ -1,0 +1,86 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<style>
+		#div1 {
+		  margin-left:400px;
+		  width: 300px;
+		  height:250px;
+		  padding: 10px;
+		  border: 5px solid #aaaaaa;
+		  text-align:center;
+		}
+		</style>
+		<script>
+			function start(ev)
+			{
+				//ev.preventDefault() não funciona no ondragstart, pois é o início da ação de arrastar, portanto não tem o que previnir;
+				ev.currentTarget.style.border="dashed";
+				ev.dataTransfer.setData("img",ev.target.id);
+				console.log("Começou");
+			}
+			function durante(ev)
+			{
+				ev.preventDefault();
+				console.log("durante");
+			}
+			function entrou(ev)
+			{
+				ev.preventDefault();
+				console.log("entrou");
+			}
+			function emCima(ev)
+			{
+				ev.preventDefault();
+				ev.currentTarget.style.background="blue";
+				console.log("Em Cima");
+			}
+					
+			function saiu(ev)
+			{
+				ev.preventDefault();
+				console.log("saiu");
+			}
+			
+			function solto(ev)
+			{
+				ev.preventDefault();
+				//pegar o id do elemento arrastado e guardado no start
+				var id = ev.dataTransfer.getData("img");
+				//como se estivessemos movendo
+				
+				
+				//ev.target.appendChild(document.getElementById(id));
+				
+				//como se estivessemos copiando a imagem
+				
+				var copia = document.getElementById(id).cloneNode(true);
+				//copia.id = "drag2";
+				ev.target.appendChild(copia);
+				console.log("Solto");
+			}
+			function fim(ev)
+			{
+				ev.preventDefault();
+				ev.target.style.border="solid black";
+				ev.dataTransfer.clearData();
+				console.log("fim");
+			}
+		</script>
+	</head>
+	<body>
+		<h1 style="margin-left:405px;">Exemplo Drag and Drop</h1><br><br>
+		<h3 style="margin-left:420px;">Arraste a figura para essa área</h3>	
+		
+		<!--alvo-->
+		<div id="div1" ondragover="emCima(event)" ondrop="solto(event)"  ondragleave="saiu(event)"ondragenter="entrou(event)"></div>
+		
+		<br><br>
+		
+		<div style="margin-left:440px;">
+			<!--peras....arrastar-->
+			<img id="drag1" src="duasperas.png"  width="210" height="104" draggable = "true" ondragstart = "start(event)" ondrag="durante(event)" ondragend="fim(event)">
+			
+		</div>
+	</body>
+</html>
