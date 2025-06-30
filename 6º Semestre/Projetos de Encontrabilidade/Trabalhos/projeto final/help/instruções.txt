@@ -1,0 +1,9 @@
+Projeto Final com o tema Protótipo de uma plataforma WEB para solucionar um problema da comunidade seguindo a estrutura da apresentação Prática_SEO_projetoFinal e melhorando os exemplos postados no canal Projeto Final. Não esqueçam de nomear o site.
+
+No dia 30 de junho haverá apresentação e entrega dos seguintes itens:  
+
+Apresentação de slides. Não esqueçam de colocar as referências bibliográficas. 
+
+Checklist (verificar arquivos aula 4) - Colocar o checklist dos atributos da encontrabilidade de dois sites concorrentes.
+ 
+Protótipo do site: Utilizando FIGMA ou outro software de prototipagem. 
