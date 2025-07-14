@@ -1,0 +1,58 @@
+<?xml version='1.0' encoding='UTF-8'?>
+
+<definitions
+	xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/"
+	xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/"
+	xmlns:tns="http://localhost/_doacao/services/doacaoSOAP.class.php"
+	xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/"
+	xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/"
+	xmlns="http://schemas.xmlsoap.org/wsdl/"
+	targetNamespace="http://localhost/_doacao/services/doacaoSOAP.class.php">
+
+	<types>
+		<xsd:schema targetNamespace="http://localhost/_doacao/services/doacaoSOAP.class.php"/>
+	</types>
+
+	<message name="InserirDoacaoRequest">
+		<part name="iddoacao" 		type="xsi:int"/>
+		<part name="data_doacao" 	type="xsi:string"/>
+		<part name="descricao" 		type="xsi:string"/>
+		<part name="doador" 		type="xsi:int"/>
+		<part name="tipo"	 		type="xsi:int"/>
+	</message>
+
+	<message name="InserirDoacaoResponse">
+		<part name="retorno" type="xsi:string"/>
+	</message>
+
+	<portType name="portType1">
+		<operation name="InserirDoacao">
+			<documentation>Inserir nova doacao</documentation>
+			<input message="InserirDoacaoRequest"/>
+			<output message="InserirDoacaoResponse"/>
+		</operation>
+	</portType>
+
+	<binding name="binding1" type="tns:portType1">
+		<soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+		
+		<operation name="InserirDoacao">
+			<soap:operation soapAction="http://localhost/_doacao/services/doacaoSOAP.class.php/InserirDoacao" style="rpc"/>
+			<input>
+				<soap:body use="encode" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="doacao"/>
+			</input>
+			
+			<output>
+				<soap:body use="encode" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="doacao"/>
+			</output>
+		</operation>
+	</binding>
+
+	<service name="doacaoSOAP">
+		<port name="tns:portType1" binding="tns:binding1">
+			<soap:address location="http://localhost/_doacao/services/doacaoSOAP.class.php"/>
+		</port>
+	</service>
+</definitions>

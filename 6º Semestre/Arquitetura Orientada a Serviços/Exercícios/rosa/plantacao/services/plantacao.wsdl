@@ -1,0 +1,63 @@
+<?xml version='1.0' encoding='UTF-8'?>
+
+<definitions
+	xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/"
+	xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/"
+	xmlns:tns="http://localhost/plantacao/services/plantacaoSOAP.class.php"
+	xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/"
+	xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/"
+	xmlns="http://schemas.xmlsoap.org/wsdl/"
+	targetNamespace="http://localhost/plantacao/services/plantacaoSOAP.class.php">
+
+<types>
+<xsd:schema targetNamespace="http://localhost/plantacao/services/plantacaoSOAP.class.php"/>
+</types>
+
+<message name="InserirColheitaRequest">
+	<part name="idcolheita" type="xsi:int"/>
+	<part name="data_colheita" type="xsi:string"/>
+	<part name="quantidade" type="xsi:float"/>
+	<part name="unidade" type="xsi:string"/>
+	<part name="plantacao" type="xsi:int"/>
+	<part name="area" type="xsi:int"/>
+</message>
+
+<message name="InserirColheitaResponse">
+	<part name="retorno" type="xsi:string"/>
+</message>
+
+<portType name="portType1">
+
+	<operation name="InserirColheita">
+	
+		<documentation>Inserir feedback da praia</documentation>
+		
+		<input message="InserirColheitaRequest"/>
+		
+		<output message="InserirColheitaResponse"/>
+	</operation>
+</portType>
+
+<binding name="binding1" type="tns:portType1">
+
+	<soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+	
+	<operation name="InserirColheita">
+		<soap:operation soapAction="http://localhost/plantacao/services/plantacaoSOAP.class.php/InserirColheita" style="rpc"/>
+		<input>
+			<soap:body use="encode" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="colheita"/>
+		</input>
+		
+		<output>
+			<soap:body use="encode" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="colheita"/>
+		</output>
+	</operation>
+</binding>
+<service name="plnatacaoSOAP">
+	<port name="tns:portType1" binding="tns:binding1">
+		<soap:address location="http://localhost/plantacao/services/plantacaoSOAP.class.php"/>
+	</port>
+</service>
+</definitions>
