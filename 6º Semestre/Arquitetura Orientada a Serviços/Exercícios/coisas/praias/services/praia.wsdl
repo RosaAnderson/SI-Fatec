@@ -1,0 +1,56 @@
+<?xml version='1.0' encoding='UTF-8'?>
+
+<definitions xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:tns="http://localhost/editora/services/editoraSOAP.class.php" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns="http://schemas.xmlsoap.org/wsdl/" targetNamespace="http://localhost/praias/services/praiaSOAP.class.php">
+
+<types>
+<xsd:schema targetNamespace="http://localhost/praias/services/praiaSOAP.class.php"/>
+</types>
+
+<message name="InserirFeedbackRequest">
+	<part name="idPraia" type="xsi:int"/>
+	<part name="nota" type="xsi:int"/>
+</message>
+
+<message name="InserirFeedbackResponse">
+	<part name="retorno" type="xsi:string"/>
+</message>
+
+
+
+<portType name="portType1">
+
+	<operation name="InserirFeedback">
+	
+		<documentation>Inserir feedback de praias</documentation>
+		
+		<input message="InserirFeedbackRequest"/>
+		
+		<output message="InserirFeedbackResponse"/>
+	</operation>
+	
+	
+</portType>
+
+<binding name="binding1" type="tns:portType1">
+
+	<soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+	
+	<operation name="InserirFeedback">
+		<soap:operation soapAction="http://localhost/praias/services/praiaSOAP.class.php/InserirFeedback" style="rpc"/>
+		<input>
+			<soap:body use="encode" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="praias"/>
+		</input>
+		
+		<output>
+			<soap:body use="encode" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="praias"/>
+		</output>
+		
+	</operation>
+	
+</binding>
+<service name="praiaSOAP">
+	<port name="tns:portType1" binding="tns:binding1">
+		<soap:address location="http://localhost/praias/services/praiaSOAP.class.php"/>
+	</port>
+</service>
+</definitions>
